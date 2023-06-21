@@ -1,0 +1,55 @@
+FORECASTING USING TIME SERIES ANALYSIS 
+GRADED ASSIGNMENT 3
+
+Dataset: Load the dataset using the following code and use the adjusted closing price column for all the tasks.
+import yfinance as yf
+dataset = yf.download('AAPL')
+
+Task 1: Handle Missing Values and Remove Outliers
+Load the "Apple Adjusted Close Price" dataset into your preferred programming environment.
+Check for any missing values in the dataset and handle them appropriately (e.g., interpolation, filling with mean/median).
+Detect and remove outliers in the dataset using the z-score method or any other suitable outlier detection technique.
+
+Task 2: Decompose the Time Series
+
+Plot the time series data to visualize the overall trend and seasonality patterns.
+Apply the seasonal decomposition of time series (e.g., using the seasonal_decompose function in Python's statsmodels library) to decompose the time series into its components: trend, seasonality, and residual.
+Plot the decomposed components and interpret the results.
+Additionally, use the Hodrick-Prescott (HP) filter to decompose the time series into trend and cyclical components.
+
+Task 3: Check for Stationarity
+
+Perform both the Augmented Dickey-Fuller (ADF) test and the Kwiatkowski-Phillips-Schmidt-Shin (KPSS) test on the original time series data.
+Interpret the test results to determine if the time series is stationary or not.
+Repeat the ADF and KPSS tests on the residual obtained from the decomposition and interpret the results.
+
+Task 4: Make the Series Stationary
+
+Visualize the original series and the residual series after decomposition.
+Apply different methods to make the residual series and the original series stationary (e.g., differencing, logarithmic transformation).
+Compare the results visually and choose the best method for further analysis.
+
+Task 5: Test for Normality
+
+Perform the Shapiro-Wilk test to test for normality of the original and transformed series.
+Plot QQ-plots to visually inspect the normality assumption.
+Interpret the test results and the QQ-plots to determine if the series can be considered normally distributed.
+
+Task 6: Test for Homoscedasticity and Apply Box-Cox Transformation
+
+Test for homoscedasticity in the transformed series using appropriate statistical tests (e.g., Breusch-Pagan test).
+Apply the Box-Cox transformation to the series to normalize the data and stabilize variance.
+Visualize the transformed series and assess the improvement in homoscedasticity.
+
+Task 7: Fit a Simple Autoregressive Model
+
+Fit a simple autoregressive (AR) model (as demonstrated in the notebook) to the transformed and stationary series.
+Validate the model by splitting the data into training and testing sets.
+Evaluate the model's performance using appropriate metrics (e.g., mean squared error, mean absolute error).
+
+
+Task 8: Test for Autocorrelation and Plot ACF/PACF
+
+
+Plot the ACF and PACF to visualize the autocorrelation in the transformed series.
+Interpret the ACF and PACF plots to identify the potential autoregressive (AR) and moving average (MA) components.( optional)
